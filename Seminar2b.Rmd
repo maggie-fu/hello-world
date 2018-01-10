@@ -1,0 +1,11 @@
+---
+title: "Plot-Making Tutorial"
+author: "Maggie Fu"
+date: "2018-01-10"
+output: github_document
+---
+
+## Deliverable
+```{r}
+ggplot(mpg, aes(displ, hwy, size = class, color = drv)) + geom_point()
+```

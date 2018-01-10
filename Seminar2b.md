@@ -27,7 +27,7 @@ library(tidyverse)
 
     ## Warning: package 'tidyverse' was built under R version 3.4.3
 
-    ## -- Attaching packages -- tidyverse 1.2.1 --
+    ## -- Attaching packages ------------------------------------------------------------------------------ tidyverse 1.2.1 --
 
     ## v ggplot2 2.2.1     v purrr   0.2.4
     ## v tibble  1.4.1     v dplyr   0.7.4
@@ -38,7 +38,7 @@ library(tidyverse)
 
     ## Warning: package 'forcats' was built under R version 3.4.3
 
-    ## -- Conflicts ----- tidyverse_conflicts() --
+    ## -- Conflicts --------------------------------------------------------------------------------- tidyverse_conflicts() --
     ## x dplyr::filter() masks stats::filter()
     ## x dplyr::lag()    masks stats::lag()
 
@@ -46,7 +46,7 @@ library(tidyverse)
 ggplot(data = mpg) + geom_point(mapping = aes(x = displ, y = hwy, color = class))
 ```
 
-![](20180110_Plots_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](Seminar2b_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
 New Template
 ------------
@@ -61,7 +61,7 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + geom_point() +geom_smoot
 
     ## `geom_smooth()` using method = 'loess'
 
-![](20180110_Plots_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](Seminar2b_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
 ### Continuous variable as the third dimension
 
@@ -71,7 +71,7 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = year)) + geom_point
 
     ## `geom_smooth()` using method = 'loess'
 
-![](20180110_Plots_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](Seminar2b_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
 Bar plots
 ---------
@@ -83,7 +83,7 @@ averageEfficiency <- mpg %>% group_by(class) %>% summarise(fuel_efficiency = mea
 ggplot(averageEfficiency) + geom_bar(aes(x = class, y = fuel_efficiency, fill = class), stat = "identity") + ylab("Fuel Efficiency (miles per gallon)") + xlab("Vehicle Type")
 ```
 
-![](20180110_Plots_files/figure-markdown_github/unnamed-chunk-6-1.png)
+![](Seminar2b_files/figure-markdown_github/unnamed-chunk-6-1.png)
 
 ``` r
 # scale inversion
@@ -95,7 +95,7 @@ ggplot(averageEfficiency) +
   scale_y_reverse()
 ```
 
-![](20180110_Plots_files/figure-markdown_github/unnamed-chunk-6-2.png)
+![](Seminar2b_files/figure-markdown_github/unnamed-chunk-6-2.png)
 
 ``` r
 # coordination flip
@@ -105,7 +105,7 @@ ggplot(averageEfficiency) +
   coord_flip()
 ```
 
-![](20180110_Plots_files/figure-markdown_github/unnamed-chunk-6-3.png)
+![](Seminar2b_files/figure-markdown_github/unnamed-chunk-6-3.png)
 
 ``` r
 # pie chart
@@ -115,7 +115,7 @@ ggplot(averageEfficiency) +
   coord_polar()
 ```
 
-![](20180110_Plots_files/figure-markdown_github/unnamed-chunk-6-4.png)
+![](Seminar2b_files/figure-markdown_github/unnamed-chunk-6-4.png)
 
 Mutiple plots
 -------------
@@ -124,7 +124,7 @@ Mutiple plots
 ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + geom_point() + facet_wrap(~class)
 ```
 
-![](20180110_Plots_files/figure-markdown_github/unnamed-chunk-7-1.png)
+![](Seminar2b_files/figure-markdown_github/unnamed-chunk-7-1.png)
 
 Deliverable
 -----------
@@ -135,4 +135,4 @@ ggplot(mpg, aes(displ, hwy, size = class, color = drv)) + geom_point()
 
     ## Warning: Using size for a discrete variable is not advised.
 
-![](20180110_Plots_files/figure-markdown_github/unnamed-chunk-8-1.png)
+![](Seminar2b_files/figure-markdown_github/unnamed-chunk-8-1.png)
