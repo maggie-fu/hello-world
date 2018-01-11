@@ -6,7 +6,7 @@ output: github_document
 ---
 
 ## Deliverable
-```{r}
+```{r, warning=FALSE}
 library(tidyverse)
 
 ggplot(mpg, aes(displ, hwy, size = class, color = drv)) + geom_point()
